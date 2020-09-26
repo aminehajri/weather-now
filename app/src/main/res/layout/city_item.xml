@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_city_name"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/location_image"
+        android:src="@drawable/ic_location" />
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_location"
+        android:fontFamily="@font/circular_std_bold"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_city_coordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_city_name"
+        android:layout_toEndOf="@+id/iv_location"
+        android:fontFamily="@font/circular_std_book"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20sp" />
+</RelativeLayout>
