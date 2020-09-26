@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hajri.weathernow.R
 import com.hajri.weathernow.callbacks.CityCallback
-import com.hajri.weathernow.data.City
+import com.hajri.weathernow.data.models.City
 import kotlinx.android.synthetic.main.city_item.view.*
 
 class CityAdapter(

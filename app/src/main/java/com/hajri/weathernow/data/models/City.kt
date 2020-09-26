@@ -1,4 +1,4 @@
-package com.hajri.weathernow.data
+package com.hajri.weathernow.data.models
 
 import com.google.gson.annotations.SerializedName
 

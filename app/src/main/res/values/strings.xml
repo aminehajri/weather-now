@@ -3,4 +3,7 @@
     <string name="no_results_text">No Results</string>
     <string name="location_image">location image</string>
     <string name="splash_screen_logo">splash screen logo</string>
+    <string name="search_menu_title">Search</string>
+    <string name="search_for_city_hint">City name</string>
+    <string name="no_internet_text">Please make sure you\'re connected to internet</string>
 </resources>

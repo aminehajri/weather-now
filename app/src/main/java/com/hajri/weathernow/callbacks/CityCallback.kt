@@ -1,6 +1,6 @@
 package com.hajri.weathernow.callbacks
 
-import com.hajri.weathernow.data.City
+import com.hajri.weathernow.data.models.City
 
 interface CityCallback {
 
