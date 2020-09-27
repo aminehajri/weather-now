@@ -6,6 +6,13 @@
     <li>Weather api : https://www.metaweather.com/api/</li>
 </ul>
 
+<h1>System requirement</h1>
+
+<ul>
+    <li>Android minSDKversion = 23</li>
+    <li>Android targetSdkVersion = 29</li>
+</ul>
+
 <h1>Architecture</h1>
 <h2>MVVM</h2>
 
