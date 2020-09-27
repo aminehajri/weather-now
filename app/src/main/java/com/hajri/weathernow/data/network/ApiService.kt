@@ -6,6 +6,7 @@ package com.hajri.weathernow.data.network
 
 import com.hajri.weathernow.BuildConfig
 import com.hajri.weathernow.data.models.City
+import com.hajri.weathernow.data.models.WeatherResponse
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit

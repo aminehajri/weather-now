@@ -37,10 +37,10 @@
 
             <ImageView
                 android:id="@+id/iv_back"
-                android:contentDescription="@string/back_image_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:contentDescription="@string/back_image_description"
                 android:src="@drawable/ic_back" />
 
 
@@ -59,10 +59,10 @@
 
         <ImageView
             android:id="@+id/iv_fresh_status"
-            android:contentDescription="@string/fresh_status_image"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/fresh_status_image" />
 
         <TextView
             android:id="@+id/tv_fresh_status"
@@ -109,7 +109,8 @@
         android:id="@+id/weather_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_fresh_weather" />
+        android:layout_below="@+id/layout_fresh_weather"
+        android:overScrollMode="never" />
 
     <ProgressBar
         android:id="@+id/progress_bar_weather"
