@@ -39,16 +39,16 @@ data class Weather(
     val windDirection: Double?,
 
     @SerializedName("air_pressure")
-    val airPressure: Int?,
+    val airPressure: Double?,
 
     @SerializedName("humidity")
-    val humidity: Int?,
+    val humidity: Double?,
 
     @SerializedName("visibility")
     val visibility: Double?,
 
     @SerializedName("predictability")
-    val predictability: Int?,
+    val predictability: Double?,
 
     var weatherStatusPicture: String?
 )

@@ -37,7 +37,7 @@ class SearchCityFragment : BaseFragment(), CityCallback {
 
     override fun initView() {
 
-        setProgressBar(mView.progress_bar)
+        setProgressBar(mView.progress_bar_city)
 
         mView.tv_empty_list.apply {
             visibility = View.VISIBLE
@@ -50,18 +50,7 @@ class SearchCityFragment : BaseFragment(), CityCallback {
             override fun onQueryTextSubmit(p0: String?): Boolean {
 
                 p0?.let {
-                    if (isOnline()) {
-                        mView.tv_empty_list.apply {
-                            visibility = View.GONE
-                            text = getString(R.string.no_results_text)
-                        }
-                        initObserver(it)
-                    } else {
-                        mView.tv_empty_list.apply {
-                            visibility = View.VISIBLE
-                            text = getString(R.string.no_internet_text)
-                        }
-                    }
+                    getCities(it)
                 }
 
                 return false
@@ -116,6 +105,26 @@ class SearchCityFragment : BaseFragment(), CityCallback {
                 }
             )
 
+    }
+
+    /**
+     * Get cities from cityViewModel
+     * Update ui depending on connectivity status
+     * @param cityName
+     */
+    private fun getCities(cityName: String) {
+        if (isOnline()) {
+            mView.tv_empty_list.apply {
+                visibility = View.GONE
+                text = getString(R.string.no_results_text)
+            }
+            initObserver(cityName)
+        } else {
+            mView.tv_empty_list.apply {
+                visibility = View.VISIBLE
+                text = getString(R.string.no_internet_text)
+            }
+        }
     }
 
     /**

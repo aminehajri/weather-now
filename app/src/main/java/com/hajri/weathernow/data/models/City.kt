@@ -14,7 +14,7 @@ data class City(
     val locationType: String?,
 
     @SerializedName("woeid")
-    val whereOnEarthId: String?,
+    val whereOnEarthId: Int?,
 
     @SerializedName("latt_long")
     val latitudeLongitude: String?

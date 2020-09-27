@@ -16,7 +16,7 @@ class WeatherViewModel(private val apiRepository: ApiRepository) : ViewModel() {
      * Get weather list from apiRepository
      * @param whereOnEarthId
      */
-    fun getWeatherList(whereOnEarthId: String) = liveData(Dispatchers.IO) {
+    fun getWeatherList(whereOnEarthId: Int) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
             emit(Resource.success(data = apiRepository.getWeatherList(whereOnEarthId = whereOnEarthId)))

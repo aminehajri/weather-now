@@ -19,6 +19,6 @@ class ApiRepository(private val apiService: ApiService) {
      * Get list of weather from apiService
      * @param whereOnEarthId
      */
-    suspend fun getWeatherList(whereOnEarthId: String) =
+    suspend fun getWeatherList(whereOnEarthId: Int) =
         apiService.getWeatherList(whereOnEarthId = whereOnEarthId)
 }

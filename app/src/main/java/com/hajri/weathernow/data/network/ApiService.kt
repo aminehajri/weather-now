@@ -43,5 +43,5 @@ interface ApiService {
      * @param whereOnEarthId which defines every city on earth
      */
     @GET("{whereOnEarthId}")
-    suspend fun getWeatherList(@Path("whereOnEarthId") whereOnEarthId: String): Response<WeatherResponse>
+    suspend fun getWeatherList(@Path("whereOnEarthId") whereOnEarthId: Int): Response<WeatherResponse>
 }
