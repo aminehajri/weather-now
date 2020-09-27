@@ -119,13 +119,15 @@ class WeatherFragment : BaseFragment() {
     private fun updateFreshWeatherItem(weather: Weather) {
         mView.apply {
             Glide.with(context)
-                .load("https://www.metaweather.com/static/img/weather/png/${weather.weatherStateAbbr}.png")
+                .load(getString(R.string.fresh_status_image_path, weather.weatherStateAbbr))
                 .into(iv_fresh_status)
 
             tv_fresh_status.text = weather.weatherStateName
-            tv_fresh_temp_average.text = "${weather.theTemp}°"
-            tv_fresh_highest_temp.text = "${weather.maxTemp}°"
-            tv_fresh_lowest_temp.text = "${weather.minTemp}°"
+            tv_fresh_temp_average.text = getString(R.string.temperature, weather.theTemp?.toInt())
+            tv_fresh_highest_temp.text =
+                getString(R.string.high_temperature, weather.maxTemp?.toInt())
+            tv_fresh_lowest_temp.text =
+                getString(R.string.low_temperature, weather.minTemp?.toInt())
 
 
         }

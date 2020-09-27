@@ -28,10 +28,15 @@ class WeatherAdapter(
 
         fun bind(weather: Weather) {
             tvDay.text = weather.applicableDate
-            tvHighestTemp.text = weather.maxTemp.toString()
-            tvLowestTemp.text = weather.minTemp.toString()
+            tvHighestTemp.text = weather.maxTemp?.toInt().toString()
+            tvLowestTemp.text = weather.minTemp?.toInt().toString()
             Glide.with(itemView)
-                .load("https://www.metaweather.com/static/img/weather/png/64/${weather.weatherStateAbbr}.png")
+                .load(
+                    itemView.context.getString(
+                        R.string.status_image_path,
+                        weather.weatherStateAbbr
+                    )
+                )
                 .into(ivStatus)
 
         }

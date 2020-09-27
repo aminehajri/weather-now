@@ -7,11 +7,16 @@
     <string name="no_results_text">No Results</string>
     <string name="location_image">location image</string>
     <string name="splash_screen_logo">splash screen logo</string>
-    <string name="search_menu_title">Search</string>
     <string name="search_for_city_hint">City name</string>
     <string name="no_internet_text">Please make sure you\'re connected to internet</string>
     <string name="choose_your_city">Search for your city</string>
     <string name="city_toolbar_title">City</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weather_status_image">weather status image</string>
+    <string name="back_image_description">back image</string>
+    <string name="fresh_status_image">fresh status image</string>
+    <string name="temperature">%1$d°</string>
+    <string name="high_temperature">H:%1$d°</string>
+    <string name="low_temperature">L:%1$d°</string>
+    <string name="fresh_status_image_path">https://www.metaweather.com/static/img/weather/png/%1$s.png</string>
+    <string name="status_image_path">https://www.metaweather.com/static/img/weather/png/64/%1$s.png</string>
 </resources>
