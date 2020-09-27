@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020. by Mohamed Amine Hajri
+ */
+
 package com.hajri.weathernow.ui.base
 
 import androidx.appcompat.app.AppCompatActivity
@@ -44,4 +48,9 @@ open class BaseActivity : AppCompatActivity() {
      * Initialize view components
      */
     open fun initView() {}
+
+    /**
+     * Init all activity fragments viewModels
+     */
+    open fun initViewModels(){}
 }

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020. by Mohamed Amine Hajri
+ */
+
 package com.hajri.weathernow.ui.base
 
 import android.content.Context
@@ -8,7 +12,7 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.hajri.weathernow.ui.weather.WeatherActivity
+import com.hajri.weathernow.ui.home.WeatherActivity
 
 
 open class BaseFragment : Fragment() {
@@ -94,6 +98,13 @@ open class BaseFragment : Fragment() {
      * Initialize view components
      */
     open fun initView() {}
+
+
+    /**
+     * Initialize observer and handle data
+     * @param T needed param to execute viewModel method
+     */
+    open fun <T> initObserver(param: T) {}
 
 
 }

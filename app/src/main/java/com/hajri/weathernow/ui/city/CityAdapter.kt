@@ -1,4 +1,8 @@
-package com.hajri.weathernow.ui.weather
+/*
+ * Copyright (c) 2020. by Mohamed Amine Hajri
+ */
+
+package com.hajri.weathernow.ui.city
 
 import android.view.LayoutInflater
 import android.view.View
@@ -28,10 +32,11 @@ class CityAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder = MyViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.city_item, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder =
+        MyViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.city_item, parent, false)
 
-    )
+        )
 
     override fun getItemCount(): Int = cities.size
 

@@ -1,4 +1,8 @@
-package com.hajri.weathernow.ui.weather
+/*
+ * Copyright (c) 2020. by Mohamed Amine Hajri
+ */
+
+package com.hajri.weathernow.ui.city
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,6 +38,13 @@ class SearchCityFragment : BaseFragment(), CityCallback {
     override fun initView() {
 
         setProgressBar(mView.progress_bar)
+
+        mView.tv_empty_list.apply {
+            visibility = View.VISIBLE
+            text = getString(R.string.choose_your_city)
+        }
+
+
         mView.search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
@@ -51,7 +62,6 @@ class SearchCityFragment : BaseFragment(), CityCallback {
                             text = getString(R.string.no_internet_text)
                         }
                     }
-
                 }
 
                 return false
@@ -67,17 +77,11 @@ class SearchCityFragment : BaseFragment(), CityCallback {
     }
 
     override fun getSelectedCity(city: City) {
-
+        weatherActivity.displayWeatherFragment(selectedCity = city)
     }
 
-
-    /**
-     * Observe cities and update ui
-     * @param cityName
-     */
-    private fun initObserver(cityName: String) {
-
-        weatherActivity.cityViewModel.getCities(cityName = cityName)
+    override fun <T> initObserver(param: T) {
+        weatherActivity.cityViewModel.getCities(cityName = param as String)
             .observe(this@SearchCityFragment,
                 Observer { resource ->
                     when (resource.status) {
@@ -114,9 +118,8 @@ class SearchCityFragment : BaseFragment(), CityCallback {
 
     }
 
-
     /**
-     * Update city_recycler
+     * Update city_recycler and cityAdapter
      * @param cities
      */
     private fun updateCityRecycler(cities: ArrayList<City>) {

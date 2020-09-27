@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020. by Mohamed Amine Hajri
+ */
+
 package com.hajri.weathernow.utils
 
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
